@@ -1,7 +1,7 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.deletarFrasePorIdController = exports.obterFrasePorIdController = exports.atualizarFraseController = exports.obterFraseController = exports.inserirFraseController = void 0;
-var service_1 = require("../services/service");
+const service_1 = require("../services/service");
 function inserirFraseController(req, res) {
     return (0, service_1.inserirFraseService)(req, res);
 }

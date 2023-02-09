@@ -1,12 +1,12 @@
 import * as morgan from 'morgan' 
-import * as server from './routes/route'
+import { server } from './routes/route'
 import * as express from 'express'
 
-const app=express()
+const app=express.default()
 
 app.use(express.urlencoded({ extended:true }))
 app.use(express.json())
-app.use(morgan('dev'))
+app.use(morgan.default('dev'))
 
 app.use('/', server)
 

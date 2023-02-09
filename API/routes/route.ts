@@ -29,7 +29,7 @@ server.route('/frase/:id').get((req: Request | any, res: Response | any)=>{
 
 ])
 
-export=server 
+export { server } 
 
 
 

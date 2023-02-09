@@ -3,7 +3,7 @@ import * as db from 'knex'
 
 dotenv.config()
 
-const knex=db({
+const knex=db.knex({
     client: process.env.CLIENT,
     connection: {
       database: process.env.DATABASE,

@@ -1,0 +1,24 @@
+{
+  "name": "typescript_version",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init":" tsc --init",
+    "tsc":"tsc --watch",
+    "dev": "nodemon ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/nodemon": "^1.19.2",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.3.3",
+    "@types/graphql": "^14.5.0",
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0"
+  }
+}
