@@ -2,7 +2,6 @@
 
 import { gql, ApolloServer } from 'apollo-server'
 
-
 const resolvers={
     Query: {
         hello(){
@@ -16,11 +15,10 @@ const resolvers={
 const typeDefs=gql`
 
     type Query {
-        hello: string
+        hello: String
     }
 
 `
-
 
 const server=new ApolloServer({
 
@@ -28,6 +26,5 @@ const server=new ApolloServer({
     resolvers
 
 })
-
 
 server.listen()

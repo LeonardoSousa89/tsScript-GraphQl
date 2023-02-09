@@ -12,7 +12,7 @@ const resolvers = {
 const typeDefs = (0, apollo_server_1.gql) `
 
     type Query {
-        hello: string
+        hello: String
     }
 
 `;
