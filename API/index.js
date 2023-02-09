@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var morgan = require("morgan");
+var server = require("./routes/route");
+var express = require("express");
+var app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(morgan('dev'));
+app.use('/', server);
+app.listen(8081);
