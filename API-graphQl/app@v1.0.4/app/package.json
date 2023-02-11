@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "tsc --init",
+    "compile":"tsc",
+    "compile-development": "tsc --watch",
+    "schema":"cp ./graphql/modules/frases/fraseSchema.gql ./__dist/graphql/modules/frases/fraseSchema.gql",
+    "dev": "npx nodemon __dist/index.js",
+    "start": "node __dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.3",
+    "@graphql-tools/load-files": "^6.6.1",
+    "@graphql-tools/merge": "^8.3.18",
+    "@types/graphql": "^14.5.0",
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0",
+    "graphql-tools": "^8.3.18"
+  }
+}
