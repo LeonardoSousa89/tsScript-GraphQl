@@ -1,7 +1,11 @@
+import knex from '../../../repository/db'
+
 export default {
 
     Query: {
-        frases: ()=> frases,
+
+        frases: async () => await knex('frases'),
+    
     },
 
 }

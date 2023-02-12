@@ -1,0 +1,13 @@
+type Frases {
+
+    id: Int
+    frase_do_usuario: String
+
+}
+
+type Query {
+
+    frases: [Frases]
+
+}
+

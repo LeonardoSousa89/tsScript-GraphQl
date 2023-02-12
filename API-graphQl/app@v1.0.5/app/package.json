@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"npx nodemon ___teste___/index.js",
     "init": "tsc --init",
-    "compile": "tsc",
+    "compile":"tsc",
     "compile-development": "tsc --watch",
-    "schema": "cp ./graphql/modules/frases/fraseSchema.gql ./__dist/graphql/modules/frases/fraseSchema.gql",
+    "schema":"cp ./graphql/modules/frases/fraseSchema.gql ./__dist/graphql/modules/frases/fraseSchema.gql",
     "dev": "npx nodemon __dist/index.js",
     "start": "node __dist/index.js"
   },
@@ -20,12 +19,8 @@
     "@graphql-tools/load-files": "^6.6.1",
     "@graphql-tools/merge": "^8.3.18",
     "@types/graphql": "^14.5.0",
-    "@types/knex": "^0.16.1",
     "apollo-server": "^3.11.1",
-    "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
-    "graphql-tools": "^8.3.18",
-    "knex": "^2.4.2",
-    "pg": "^8.9.0"
+    "graphql-tools": "^8.3.18"
   }
 }
