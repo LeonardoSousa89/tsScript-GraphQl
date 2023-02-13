@@ -1,0 +1,24 @@
+# https://graphql.org/learn/queries/
+
+# GET
+query {
+   frases {
+    id frase_do_usuario __typename
+   }
+}
+
+# POST
+mutation Mutation($data: FrasesInput) {
+  setFrase(data: $data) {
+    id frase_do_usuario
+  }
+}
+
+# DELETE
+mutation Mutation($data: FrasesInput) {
+  setFrase(data: $data) {
+    id frase_do_usuario
+  }
+}
+
+

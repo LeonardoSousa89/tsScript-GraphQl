@@ -3,7 +3,7 @@ const dotenv=require('dotenv')
 
 dotenv.config()
 
-module.exports=knex.default({
+module.exports=knex({
     
     client: process.env.CLIENT,
     connection: {

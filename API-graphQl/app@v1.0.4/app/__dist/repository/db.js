@@ -29,7 +29,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const knex_1 = __importDefault(require("knex"));
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
-exports.default = knex_1.default.default({
+exports.default = (0, knex_1.default)({
     client: process.env.CLIENT,
     connection: {
         database: process.env.DATABASE,

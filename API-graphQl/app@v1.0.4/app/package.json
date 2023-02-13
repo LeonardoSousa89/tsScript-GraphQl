@@ -8,7 +8,7 @@
     "init": "tsc --init",
     "compile": "tsc",
     "compile-development": "tsc --watch",
-    "schema": "cp ./graphql/modules/frases/fraseSchema.gql ./__dist/graphql/modules/frases/fraseSchema.gql",
+    "copy-schema": "cp ./graphql/modules/frases/fraseSchema.gql ./__dist/graphql/modules/frases/fraseSchema.gql",
     "dev": "npx nodemon __dist/index.js",
     "start": "node __dist/index.js"
   },

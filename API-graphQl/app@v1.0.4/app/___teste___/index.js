@@ -8,11 +8,17 @@ const typeDefs=gql`
         frase_do_usuario: String
     }
 
+    input FrasesInput {
+        frase_do_usuario: String
+    }
+
     type Query {
         frases: [Frases]
     }
 
-
+    type Mutation {
+        setFrase(data: FrasesInput): Frases
+    }
 
 `
 
@@ -23,6 +29,10 @@ const resolvers={
 
         //ou assim:
         frases: async () => await knex('frases')
+    },
+
+    Mutation: {
+        setFrase: async (_, { data }) => await(await knex.from('frases').insert(data).returning('*'))[0],
     }
 }
 
@@ -33,4 +43,4 @@ const server=new ApolloServer({
 
 })
 
-server.listen()
+server.listen().then(response=>console.log(response.url))

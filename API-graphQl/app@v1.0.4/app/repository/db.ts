@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-export default knex.default({
+export default knex({
 
     client: process.env.CLIENT,
     connection: {

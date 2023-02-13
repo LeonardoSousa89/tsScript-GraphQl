@@ -1,13 +1,22 @@
 type Frases {
-
     id: Int
     frase_do_usuario: String
+}
 
+input FrasesInput {
+    frase_do_usuario: String
+}
+
+input FiltroInput {
+  id: Int
 }
 
 type Query {
-
     frases: [Frases]
+}
 
+type Mutation {
+  setFrase(data: FrasesInput): Frases
+  delFrase(id: FiltroInput): Boolean
 }
 

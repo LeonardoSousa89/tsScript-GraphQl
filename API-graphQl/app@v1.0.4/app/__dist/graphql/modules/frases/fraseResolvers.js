@@ -17,4 +17,10 @@ exports.default = {
     Query: {
         frases: () => __awaiter(void 0, void 0, void 0, function* () { return yield (0, db_1.default)('frases'); }),
     },
+    Mutation: {
+        /* Obrigatório o desestructuring e o retorno do primeiro,
+        indíce pois a mutation retorna um elemento do tipo Frases **/
+        setFrase: (_, { data }) => __awaiter(void 0, void 0, void 0, function* () { return yield (yield db_1.default.from('frases').insert(data).returning('*'))[0]; }),
+        delFrase: (_, { filtro }) => __awaiter(void 0, void 0, void 0, function* () { return yield (0, db_1.default)('frases').where({ id: filtro.id }).delete(); })
+    },
 };
